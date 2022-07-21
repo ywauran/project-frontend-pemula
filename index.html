@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookshelf Apps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="header_name">Bookshelf <span>APPS</span></h1>
+    </header>
+
+    <main>
+
+        <div class="content" style="margin-top: 15px;">
+            <h2 class="title_content">Masukkan Buku Baru</h2>
+            <div class="form_input">
+                <form id="inputBook">
+                    <div class="input">
+                        <input placeholder="Judul" id="inputBookTitle" type="text" required>
+                    </div>
+                    <div class="input">
+                        <input placeholder="Penulis" id="inputBookAuthor" type="text" required>
+                    </div>
+                    <div class="input">
+                        <input placeholder="Tahun" id="inputBookYear" type="number" required>
+                    </div>
+                    <div class="input_inline">
+                        <input id="inputBookIsComplete" type="checkbox">
+                        <label for="inputBookIsComplete">Selesai dibaca</label>
+                    </div>
+                    <button id="bookSubmit" type="submit">Masukkan Buku ke rak <span>Belum selesai dibaca</span></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="content" style="margin-top: 15px; border-radius: 0;">
+            <h2 class="title_content">Cari Buku</h2>
+            <div class="form_search">
+                <form id="searchBook" class="search_book">
+                    <input class="input_search" onkeyup="myFunction()" placeholder="Harry Potter" id="searchBookTitle" type="text">
+                    <button id="searchSubmit" type="submit"><img class="img_search" src="assets/img/search.png" alt=""></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="content" style="margin-top: 15px;">
+            <h2 class="title_read">Belum selesai dibaca</h2>
+            <div id="incompleteBookshelfList" class="read">
+                <!-- <article class="book_item">
+                    <h3>Book Title</h3>
+                    <p>Penulis: John Doe</p>
+                    <p>Tahun: 2002</p>
+
+                    <div class="action">
+                        <button class="complete">Selesai dibaca</button>
+                        <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </article> -->
+            </div>
+            <h2 class="title_read">Selesai dibaca</h2>
+            <div id="completeBookshelfList" class="read">
+                <!-- <article class="book_item">
+                    <h3>Book Title</h3>
+                    <p>Penulis: John Doe</p>
+                    <p>Tahun: 2002</p>
+
+                    <div class="action">
+                        <button class="complete">Belum selesai dibaca</button>
+                        <button class="delete">Hapus buku</button>
+                    </div>
+                </article> -->
+            </div>
+        </div>
+    </main>
+    <footer style="margin-top: 20px;">
+        <p style="color: #169E16;">Copyright ©2022 All rights reserved </p>
+    </footer>
+    <script src="https://kit.fontawesome.com/2c64ac9144.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
